@@ -45,7 +45,10 @@ while True:
 	ip_address_dest = received[45:56]
 	message = received[56:]
 	
-	print(message)
+	print("---------------------------------------------")
+	print("The destination IP address is ",ip_address_dest)
+	print("The message is - ",message)
+	print("----------------------------------------------")
 	
 	e_header = MAC_router + arp_table_mac[ip_address_dest]
 	IP_header = ip_address_source + ip_address_dest

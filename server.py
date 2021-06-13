@@ -4,6 +4,7 @@
 
 import socket
 import time
+import calculateChecksum
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind(("localhost",8000))
@@ -26,7 +27,8 @@ while True:
 	
 	print("\n Enter a message: ")
 	message = raw_input()
-	
+	checksum = calculateChecksum.CalculateChecksum(message)
+	print(checksum)
 	destination = "23.23.10.10"
 	if(destination == "23.23.10.10"):
 		s_ip = IP_server
