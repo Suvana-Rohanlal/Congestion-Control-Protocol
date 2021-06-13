@@ -47,4 +47,14 @@ def check(message):
 		return True
 	else:
 		return False
+		
+input1 = "Hello"
+input2 = "Bye"
+c = CalculateChecksum(input1)
+output = "is "+input1+" equal to "+input2
+print(output)
+print(check(input2))
+output = "is "+input1+" equal to "+input1
+print(output)
+print(check(input1))
 
